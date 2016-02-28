@@ -1,6 +1,6 @@
 package backend;
 
-public class Connect4 {
+public class  {
 	int CurrentPlayer; //either 1 or 2
 	//array grows toward lower addresses
 	//this is typically perfect array 
@@ -36,7 +36,7 @@ public class Connect4 {
 	void switchPlayer(){
 		CurrentPlayer = 3- CurrentPlayer;
 	}
-	Public int getPlayer(){
+	public int getPlayer(){
 		return CurrentPlayer;
 	}
 	int getWinner(){
