@@ -17,13 +17,20 @@ public class Connect4 {
 	public int[][] getArray(){
 		return Array;
 	}
-	//insert
+	//inserts a coin in the right place then
+	//switch the players color and check for winner
 	public int insertCoin(int where){
 		
 		return getWinner();
 	}
 	//returns the winner or -1 if the array is
 	//full with no winner returns 0 otherwise
+	void switchPlayer(){
+		CurrentPlayer = 3- CurrentPlayer;
+	}
+	int getPlayer(){
+		return CurrentPlayer;
+	}
 	int getWinner(){
 		int i,j;
 		for(i=0;i<6;i++)
@@ -59,6 +66,7 @@ public class Connect4 {
 	}
 	Connect4(){
 		Array = new int[6][7]; //defaults to zero
+		CurrentPlayer=1;
 		
 	}
 }
