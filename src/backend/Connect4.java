@@ -1,6 +1,6 @@
 package backend;
 
-public class  {
+public class Connect4 {
 	int CurrentPlayer; //either 1 or 2
 	//array grows toward lower addresses
 	//this is typically perfect array 
