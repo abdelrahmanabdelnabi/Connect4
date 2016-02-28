@@ -9,7 +9,7 @@ public class Connect4 {
 	//0 0 0 0 0 0 0
 	//0 0 0 0 0 0 0
 	//1 0 2 0 1 0 0
-	//2 0 1 0 1 0 0 
+	//2 0 1 0 1 0 0
 	//1 2 1 2 1 0 0
 	//1 2 2 2 1 0 0
 	int [][] Array;
@@ -18,9 +18,17 @@ public class Connect4 {
 		return Array;
 	}
 	//inserts a coin in the right place then
+	//returns -2 if it is impossible to insert the coin
 	//switch the players color and check for winner
-	public int insertCoin(int where){
-		
+	public int insertCoin(int here){
+		int i;
+		for (i=5;i>=0;i--)
+			if(Array[i][here]==0)
+				break;
+		if (Array[i][here]!=0)
+			return -2;
+		Array[i][here] = CurrentPlayer;
+		switchPlayer();
 		return getWinner();
 	}
 	//returns the winner or -1 if the array is
