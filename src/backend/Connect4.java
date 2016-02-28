@@ -1,10 +1,26 @@
 package backend;
 
 public class Connect4 {
+	int CurrentPlayer; //either 1 or 2
+	//array grows toward lower addresses
+	//this is typically perfect array
+	//0 0 0 0 0 0 0
+	//0 0 0 0 0 0 0
+	//1 0 2 0 1 0 0
+	//2 0 1 0 1 0 0 
+	//1 2 1 2 1 0 0
+	//1 2 2 2 1 0 0
 	int [][] Array;
+	//  [6][7]
 	public int[][] getArray(){
 		return Array;
 	}
+	//insert
+	public int insertCoin(int where,int ){
+		
+		return getWinner();
+	}
+	//returns the winner or returns 0 otherwise
 	int getWinner(){
 		int i,j;
 		for(i=0;i<6;i++)
