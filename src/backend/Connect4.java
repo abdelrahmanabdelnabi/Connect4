@@ -36,7 +36,7 @@ public class Connect4 {
 	void switchPlayer(){
 		CurrentPlayer = 3- CurrentPlayer;
 	}
-	Public int getPlayer(){
+	public int getPlayer(){
 		return CurrentPlayer;
 	}
 	int getWinner(){
