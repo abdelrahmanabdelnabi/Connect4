@@ -1,5 +1,5 @@
 package backend;
-
+//this is a useless comment :D trying to push
 public class Connect4 {
 	int CurrentPlayer; //either 1 or 2
 	//array grows toward lower addresses
