@@ -48,12 +48,12 @@ public class Connect4 {
 			for(j=0;j<COLUMNS;j++){
 				if (Array[i][j]==0)
 					continue;
-				if(j+3<ROWS)
+				if(j+3<COLUMNS)
 					if(Array[i][j] == Array[i][j+1] && 
 					   Array[i][j] == Array[i][j+2] &&
 					   Array[i][j] == Array[i][j+3])
 						return Array[i][j];
-				if(i+3<COLUMNS)
+				if(i+3<ROWS)
 					if(Array[i][j] == Array[i+1][j] &&
 					   Array[i][j] == Array[i+2][j] &&
 					   Array[i][j] == Array[i+3][j])
@@ -63,7 +63,7 @@ public class Connect4 {
 					   Array[i][j] == Array[i+2][j+2] &&
 					   Array[i][j] == Array[i+3][j+3])
 						return Array[i][j];
-				if(i+3<COLUMNS &&j-3>=0)
+				if(i+3<ROWS &&j-3>=0)
 					if(Array[i][j] == Array[i+1][j-1] &&
 					   Array[i][j] == Array[i+2][j-2] &&
 					   Array[i][j] == Array[i+3][j-3])
