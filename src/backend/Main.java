@@ -20,8 +20,8 @@ public class Main {
 			state = NewGame.insertCoin(IntInput);
 			int [][] Array = NewGame.getArray();
 			int i,j;
-			for(i=0;i<6;i++){
-				for(j=0;j<7;j++)
+			for(i=0;i<Connect4.ROWS;i++){
+				for(j=0;j<Connect4.COLUMNS;j++)
 					System.out.print(Array[i][j]+" ");
 				System.out.println("");
 			}
