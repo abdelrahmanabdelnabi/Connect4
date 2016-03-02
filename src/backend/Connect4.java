@@ -1,6 +1,9 @@
 package backend;
 //this is a useless comment :D trying to push
 public class Connect4 {
+	
+	public static final int ROWS = 6;
+	public static final int COLUMNS = 7;
 	int CurrentPlayer; //either 1 or 2
 	//array grows toward lower addresses
 	//this is typically perfect array 
