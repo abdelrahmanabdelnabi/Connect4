@@ -25,14 +25,4 @@ public class MA extends MouseAdapter {
 		pointerY = event.getY();
 		source = 3;
 	}
-	
-	public int getPointerX()
-	{
-		return pointerX;
-	}
-	
-	public int getPointerY()
-	{
-		return pointerY;
-	}
 }
