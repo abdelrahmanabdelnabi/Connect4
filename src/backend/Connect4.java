@@ -34,15 +34,15 @@ public class Connect4 {
 		switchPlayer();
 		return getWinner();
 	}
-	//returns the winner or -1 if the array is
-	//full with no winner returns 0 otherwise
 	void switchPlayer(){
 		CurrentPlayer = 3- CurrentPlayer;
 	}
 	public int getPlayer(){
 		return CurrentPlayer;
 	}
-	int getWinner(){
+	//returns the winner or -1 if the array is
+	//full with no winner returns 0 otherwise	
+	public int getWinner(){
 		int i,j;
 		for(i=0;i<ROWS;i++)
 			for(j=0;j<COLUMNS;j++){
@@ -75,7 +75,7 @@ public class Connect4 {
 				zeros++;
 		return zeros ==0? -1 :0;
 	}
-	Connect4(){
+	public Connect4(){
 		Array = new int[ROWS][COLUMNS]; //defaults to zero
 		CurrentPlayer=1;
 		
