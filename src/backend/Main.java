@@ -20,18 +20,13 @@ public class Main {
 			state = NewGame.insertCoin(IntInput);
 			int [][] Array = NewGame.getArray();
 			int i,j;
-			for(i=0;i<Connect4.ROWS;i++){
-				System.out.println(".......................");
-				System.out.print("||");
-				for(j=0;j<Connect4.COLUMNS;j++)
-					System.out.print((Array[i][j]==0?" ":Array[i][j])+"||");
+			for(i=0;i<6;i++){
+				for(j=0;j<7;j++)
+					System.out.print(Array[i][j]+" ");
 				System.out.println("");
 			}
-			System.out.println(".......................");
-
 		}while(state==0);
 		Input.close();
-		System.out.println(state!=-1?"Winner is player" + state:"Draw!");
 		
 	}
 }

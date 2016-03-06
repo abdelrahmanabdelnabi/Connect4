@@ -25,7 +25,7 @@ public class Connect4 {
 	//switch the players color and check for winner
 	public int insertCoin(int here){
 		int i;
-		for (i=ROWS-1;i>=0;i--)
+		for (i=5;i>=0;i--)
 			if(Array[i][here]==0)
 				break;
 		if (Array[i][here]!=0)
@@ -42,41 +42,41 @@ public class Connect4 {
 	public int getPlayer(){
 		return CurrentPlayer;
 	}
-	int getWinner(){
+	public int getWinner(){
 		int i,j;
-		for(i=0;i<ROWS;i++)
-			for(j=0;j<COLUMNS;j++){
+		for(i=0;i<6;i++)
+			for(j=0;j<7;j++){
 				if (Array[i][j]==0)
 					continue;
-				if(j+3<COLUMNS)
+				if(j+3<6)
 					if(Array[i][j] == Array[i][j+1] && 
 					   Array[i][j] == Array[i][j+2] &&
 					   Array[i][j] == Array[i][j+3])
 						return Array[i][j];
-				if(i+3<ROWS)
+				if(i+3<7)
 					if(Array[i][j] == Array[i+1][j] &&
 					   Array[i][j] == Array[i+2][j] &&
 					   Array[i][j] == Array[i+3][j])
 						return Array[i][j];
-				if(i+3<ROWS &&j+3<COLUMNS)
+				if(i+3<7 &&j+3<6)
 					if(Array[i][j] == Array[i+1][j+1] &&
 					   Array[i][j] == Array[i+2][j+2] &&
 					   Array[i][j] == Array[i+3][j+3])
 						return Array[i][j];
-				if(i+3<ROWS &&j-3>=0)
+				if(i+3<7 &&j-3>=0)
 					if(Array[i][j] == Array[i+1][j-1] &&
 					   Array[i][j] == Array[i+2][j-2] &&
 					   Array[i][j] == Array[i+3][j-3])
 						return Array[i][j];
 			}
 		int zeros=0;
-		for(j=0;j<COLUMNS;j++)
+		for(j=0;j<7;j++)
 			if(Array[0][j]==0)
 				zeros++;
 		return zeros ==0? -1 :0;
 	}
-	Connect4(){
-		Array = new int[ROWS][COLUMNS]; //defaults to zero
+	public Connect4(){
+		Array = new int[6][7]; //defaults to zero
 		CurrentPlayer=1;
 		
 	}
