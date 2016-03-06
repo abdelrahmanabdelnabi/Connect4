@@ -25,11 +25,11 @@ public class Connect4 {
 	//switch the players color and check for winner
 	public int insertCoin(int here){
 		int i;
-		for (i=ROWS-1;i>=0;i--)
+		for (i=ROWS-1;i>0;i--)
 			if(Array[i][here]==0)
 				break;
 		if (Array[i][here]!=0)
-			return -2;
+			return -2;	
 		Array[i][here] = CurrentPlayer;
 		switchPlayer();
 		return getWinner();
