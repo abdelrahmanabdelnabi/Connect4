@@ -1,6 +1,7 @@
 package frontend;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -124,29 +125,53 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 				winner = newgame.getWinner();
 
 				if (winner == 1) {
-					JOptionPane.showMessageDialog(this,
-							"Player 1 wins\nCongratulations", "WINNER",
-							JOptionPane.PLAIN_MESSAGE);
+					super.paintComponent(g);
+					initUI(g);
+					g.setColor(Color.RED);
+					g.setFont(new Font("Serif", Font.BOLD, 40));
+					g.drawString("player 1 wins", this.getWidth() - 300,
+							this.getHeight() / 2);
+				
+//					JOptionPane.showMessageDialog(this,
+//							"Player 1 wins\nCongratulations", "WINNER",
+//							JOptionPane.PLAIN_MESSAGE);
 
-					// stop listening for clicks
+					// stop listening for mouse events
 					this.removeMouseListener(this);
+					this.removeMouseMotionListener(this);
 
 				} else if (winner == 2) {
-					JOptionPane.showMessageDialog(this,
-							"Player 2 wins\nCongratulations", "WINNER",
-							JOptionPane.PLAIN_MESSAGE);
+					super.paintComponent(g);
+					initUI(g);
+					g.setColor(Color.YELLOW);
+					g.setFont(new Font("Serif", Font.BOLD, 40));
+					g.drawString("player 1 wins", this.getWidth() - 300,
+							this.getHeight() / 2);
 
-					// stop listening for clicks
+//					JOptionPane.showMessageDialog(this,
+//							"Player 2 wins\nCongratulations", "WINNER",
+//							JOptionPane.PLAIN_MESSAGE);
+
+					// stop listening for mouse events
 					this.removeMouseListener(this);
+					this.removeMouseMotionListener(this);
 				}
 				// if the game ended as a draw
 				else if (winner == -1) {
-					JOptionPane.showMessageDialog(this,
-							"The game ended as a DRAW", "DRAW",
-							JOptionPane.PLAIN_MESSAGE);
+					super.paintComponent(g);
+					initUI(g);
+					g.setColor(Color.BLACK);
+					g.setFont(new Font("Serif", Font.BOLD, 40));
+					g.drawString("DRAW", this.getWidth() - 300,
+							this.getHeight() / 2);
+					
+//					JOptionPane.showMessageDialog(this,
+//							"The game ended as a DRAW", "DRAW",
+//							JOptionPane.PLAIN_MESSAGE);
 
 					// stop listening for clicks
 					this.removeMouseListener(this);
+					this.removeMouseMotionListener(this);
 				}
 			}
 
@@ -165,7 +190,6 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 		pointerY = e.getY();
 		source = 1;
 		repaint();
-
 	}
 
 	@Override
@@ -174,7 +198,6 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 		pointerY = e.getY();
 		source = 2;
 		repaint();
-
 	}
 
 	@Override
@@ -199,7 +222,6 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 		pointerY = e.getY();
 		source = 5;
 		repaint();
-
 	}
 
 	@Override
@@ -208,7 +230,6 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 		pointerY = e.getY();
 		source = 6;
 		repaint();
-
 	}
 
 	@Override
@@ -217,6 +238,5 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 		pointerY = e.getY();
 		source = 7;
 		repaint();
-
 	}
 }

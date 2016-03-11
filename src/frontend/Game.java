@@ -19,7 +19,7 @@ public class Game extends JFrame {
 		
 		// register the UI as a mouse listener and mouse motion listener
 		UI.addMouseListener(UI);
-		UI.addMouseMotionListener(UI);	
+		UI.addMouseMotionListener(UI);
 	}
 	
 	public static void main(String[] args) {
