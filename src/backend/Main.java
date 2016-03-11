@@ -7,7 +7,7 @@ public class Main {
 		System.out.println("    _/       _/    _/  _/    _/  _/    _/  _/_/_/_/  _/          _/        _/_/_/_/");
 		System.out.println("   _/       _/    _/  _/    _/  _/    _/  _/        _/          _/            _/");
 		System.out.println("    _/_/_/   _/_/    _/    _/  _/    _/    _/_/_/    _/_/_/      _/_/        _/");
-	          
+	         
 	}
 	public static void main(String[] argv){
 		welcome();
@@ -29,7 +29,7 @@ public class Main {
 			}
 			System.out.println(".......................");
 
-		}while(state==0);
+		}while(state==0 || state==-2);
 		Input.close();
 		System.out.println(state!=-1?"Winner is player" + state:"Draw!");
 		
