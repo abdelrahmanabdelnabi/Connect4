@@ -1,5 +1,4 @@
 package backend;
-//this is a useless comment :D trying to push
 public class Connect4 {
 	
 	public static final int ROWS = 6;
