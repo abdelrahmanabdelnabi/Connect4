@@ -145,7 +145,7 @@ public class Draw extends JPanel implements MouseListener, MouseMotionListener {
 					initUI(g);
 					g.setColor(Color.YELLOW);
 					g.setFont(new Font("Serif", Font.BOLD, 40));
-					g.drawString("player 1 wins", this.getWidth() - 300,
+					g.drawString("player 2 wins", this.getWidth() - 300,
 							this.getHeight() / 2);
 
 //					JOptionPane.showMessageDialog(this,
