@@ -1,10 +1,10 @@
-`
+```
        _/_/_/                                                      _/        _/  _/
      _/         _/_/    _/_/_/    _/_/_/      _/_/      _/_/_/  _/_/_/_/    _/  _/
     _/       _/    _/  _/    _/  _/    _/  _/_/_/_/  _/          _/        _/_/_/_/
    _/       _/    _/  _/    _/  _/    _/  _/        _/          _/            _/
     _/_/_/   _/_/    _/    _/  _/    _/    _/_/_/    _/_/_/      _/_/        _/
-`
+```
 #Connect 4 report
 ##Backend
 At its core, the game is one class called `connect4` this class holds the game
