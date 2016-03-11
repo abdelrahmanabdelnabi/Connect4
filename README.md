@@ -42,6 +42,44 @@ Returns the current player
 ####4.`getWinner()`
 This function iterates over the whole array starting from `Array[0][0]` till
 `Array[6][7]` if that cell is proved to _not_ be a _zero_ it will test if one
-of the following patter exits where the `[x]` resembles cell patterns that will
+of the following patter exits where the `X` resembles cell patterns that will
 be checked
+```
+   Pattern 1        pattern 2
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | |X|X|X|X|  | | | |X| | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | |X| | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | |X| | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | |X| | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+
+   Pattern 3        pattern 4
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | |X| | | |  | | | |X| | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | |X| | |  | | |X| | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | |X| |  | |X| | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | |X|  |X| | | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+| | | | | | | |  | | | | | | | |
++-+-+-+-+-+-+-+  +-+-+-+-+-+-+-+
+
+```
+If winner is found the number of that player will be returned,if it is draw
+-1 is returned, otherwise this function will always return zero.
+####4. `insertcoin(int here)`
+this function will take a column as argument and check if their is empty
+slot it will insert a coin their, if their is not it will return _-2_
+then it will switch player and run `checkWinner` and return its return value.
 
